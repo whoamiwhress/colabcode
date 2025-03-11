@@ -16,7 +16,6 @@ except ImportError:
 
 
 EXTENSIONS = ["ms-python.python", "ms-toolsai.jupyter", "mechatroner.rainbow-csv", "vscode-icons-team.vscode-icons"]
-CODESERVER_VERSION = "3.10.2"
 
 
 class ColabCode:
@@ -48,7 +47,7 @@ class ColabCode:
     def _install_code():
         subprocess.run(["wget", "https://code-server.dev/install.sh"], stdout=subprocess.PIPE)
         subprocess.run(
-            ["sh", "install.sh", "--version", f"{CODESERVER_VERSION}"],
+            ["sh", "install.sh"],
             stdout=subprocess.PIPE,
         )
 
